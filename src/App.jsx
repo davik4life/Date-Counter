@@ -15,6 +15,13 @@ export default function App() {
 		step > 1 && setStep((s) => s - 1);
 	}
 
+	function handleCountPlus() {
+		count >= 0 && setCount((s) => s + 1);
+	}
+
+	function handleCountMinus() {
+		count > 0 && setCount((s) => s - 1);
+	}
 	return (
 		<>
 			<header className="headerItem">
@@ -27,9 +34,9 @@ export default function App() {
 					<button onClick={handleStepsPlus}>+</button>
 				</section>
 				<section className="bodyArea">
-					<button>-</button>
-					<p>Count: 0</p>
-					<button>+</button>
+					<button onClick={handleCountMinus}>-</button>
+					<p>Count: {count}</p>
+					<button onClick={handleCountPlus}>+</button>
 				</section>
 				<div className="dateArea">{`Today is ${today.toDateString()}`}</div>
 			</main>
