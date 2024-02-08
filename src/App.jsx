@@ -7,6 +7,7 @@ const today = new Date();
 export default function App() {
 	const [step, setStep] = useState(1);
 	const [count, setCount] = useState(0);
+
 	function handleStepsPlus() {
 		step >= 1 && setStep((s) => s + 1);
 	}
@@ -16,11 +17,11 @@ export default function App() {
 	}
 
 	function handleCountPlus() {
-		count >= 0 && setCount((s) => s + 1);
+		count >= 0 && setCount((s) => s + step);
 	}
 
 	function handleCountMinus() {
-		count > 0 && setCount((s) => s - 1);
+		count > 0 && setCount((s) => s - step);
 	}
 	return (
 		<>
