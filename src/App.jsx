@@ -39,7 +39,7 @@ export default function App() {
 					<p>Count: {count}</p>
 					<button onClick={handleCountPlus}>+</button>
 				</section>
-				<div className="dateArea">{`Today is ${today.toDateString()}`}</div>
+				<div className="dateArea">{ `Today is ${today.toDateString()}.`}</div>
 			</main>
 		</>
 	);
